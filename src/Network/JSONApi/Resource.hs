@@ -78,7 +78,7 @@ instance AE.FromJSON Relationship where
     return $ Relationship d (fromMaybe mempty l)
 
 newtype Relationships = Relationships { fromRelationships :: HM.HashMap Text Relationship }
-  deriving (Show, Eq, Generic, Monoid, ToJSON, FromJSON)
+  deriving (Show, Eq, Generic, Semigroup, Monoid, ToJSON, FromJSON)
 
 deriving instance Hashable Relationships
 

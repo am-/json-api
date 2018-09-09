@@ -120,7 +120,7 @@ constrain the 'Value' to a heterogeneous list of Resource types.
 See 'mkIncludedResource' for creating 'Included' types.
 -}
 newtype Included = Included (DL.DList Value)
-  deriving (Show, Monoid)
+  deriving (Show, Semigroup, Monoid)
 
 getIncluded :: Included -> [Value]
 getIncluded (Included d) = DL.toList d

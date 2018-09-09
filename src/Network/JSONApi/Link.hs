@@ -33,7 +33,7 @@ Example JSON:
 Specification: <http://jsonapi.org/format/#document-links>
 -}
 newtype Links = Links { fromLinks :: HM.HashMap Rel Href }
-  deriving (Show, Eq, ToJSON, FromJSON, G.Generic, Monoid, Hashable)
+  deriving (Show, Eq, ToJSON, FromJSON, G.Generic, Semigroup, Monoid, Hashable)
 
 type Rel = Text
 type Href = Text
